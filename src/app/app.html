@@ -1,16 +1,24 @@
-<ion-menu [content]="content">
+<ion-menu [content]="content" id="sidemenu">
   <ion-header>
     <ion-toolbar>
-      <ion-title>Menu</ion-title>
+      <ion-title>Resume Editing</ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <ion-content>
+  <ion-content class="sidemenu-box">
+    <ion-list>
+      <div class="avatar-box" style="background-image:url('/assets/imgs/avatar.png');">
+      </div>
+  		<button ion-button block class="btn-edit" (click)="edit()">Edit Account</button>
+	</ion-list>
     <ion-list>
       <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
         {{p.title}}
       </button>
     </ion-list>
+	<ion-list>
+		<button menuClose ion-button block class="form-btn btn-logout" (click)="logout()">Logout</button>
+	</ion-list>
   </ion-content>
 
 </ion-menu>

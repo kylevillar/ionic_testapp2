@@ -2,9 +2,11 @@ import { Component, ViewChild } from '@angular/core';
 import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-
 import { HomePage } from '../pages/home/home';
+import { LoginPage } from '../pages/login/login';
+import { StartPage } from '../pages/start/start';
 import { ListPage } from '../pages/list/list';
+import { EditAccountPage } from '../pages/edit-account/edit-account';
 
 @Component({
   templateUrl: 'app.html'
@@ -12,7 +14,7 @@ import { ListPage } from '../pages/list/list';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = HomePage;
+  rootPage: any = StartPage;
 
   pages: Array<{title: string, component: any}>;
 
@@ -21,12 +23,11 @@ export class MyApp {
 
     // used for an example of ngFor and navigation
     this.pages = [
-      { title: 'Home', component: HomePage },
+      { title: 'Dashboard', component: HomePage },
       { title: 'List', component: ListPage }
     ];
-
+		
   }
-
   initializeApp() {
     this.platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
@@ -34,6 +35,12 @@ export class MyApp {
       this.statusBar.styleDefault();
       this.splashScreen.hide();
     });
+  }
+  edit(){
+    this.nav.setRoot(EditAccountPage);
+  }
+  logout(){
+    this.nav.setRoot(StartPage);
   }
 
   openPage(page) {

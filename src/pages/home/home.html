@@ -3,16 +3,88 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Home</ion-title>
+    <ion-title>Dashboard</ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <h3>Ionic Menu Starter</h3>
-
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
-  </p>
-
-  <button ion-button secondary menuToggle>Toggle Menu</button>
+<ion-content class="bg-dashboard" padding>
+	<h2 class="section-heading"><img class="heading-icon" src="assets/imgs/plus-button.svg" alt="plus"> Create New</h2>
+	<ion-grid class="create-new-grid">
+		<ion-row>
+			<ion-col class="box">
+				<button class="btn-create" (click)="createResume()">
+					<div class="icon-box-1">
+						<img class="small-icon" src="assets/imgs/resume-cv.svg" alt="resume-cv">
+						<p class="icon-name">Resume/CV</p>
+					</div>
+				</button>
+			</ion-col>
+			<ion-col class="box">
+				<button class="btn-create">
+					<div class="icon-box-2">
+						<img class="small-icon" src="assets/imgs/cover-letter.svg" alt="cover-letter">
+						<p class="icon-name">Cover Letter</p>
+					</div>
+				</button>
+			</ion-col>
+		</ion-row>
+	</ion-grid>
+	<h2 class="section-heading"><img class="heading-icon" src="assets/imgs/resume.svg" alt="plus"> My Resumes</h2>
+	<ion-grid class="resume-grid">
+		<ion-row>
+			<ion-col class="file-box">
+				<div class="heading-bar-green">
+					<h3 class="resume-name">
+					  Sample Resume 1
+					  <button ion-button type="submit" class="form-btn btn-small">
+					  	<img class="small-img-btn" src="assets/imgs/settings.svg" alt="se">
+					  </button>
+					  <button ion-button type="submit" class="form-btn btn-small">
+					  	<img class="small-img-btn" src="assets/imgs/share.svg" alt="sh">
+					  </button>
+					  <button ion-button type="submit" class="form-btn btn-small">
+					  	<img class="small-img-btn" src="assets/imgs/edit.svg" alt="ed">
+					  </button>
+					</h3>
+				</div>
+				<div class="inner">
+					<p class="file-attr">Date Last Modified</p>
+					<p class="file-data">January 1, 2018, 8:00 PM</p>
+					<p class="file-attr">Resume URL</p>
+					<p class="file-data">resumeediting.com/smp1</p>
+					<p class="file-attr">Template Used</p>
+					<p class="file-data">Sample Template 1</p>
+				</div>
+			</ion-col>
+		</ion-row>
+	</ion-grid>
+	<h2 class="section-heading"><img class="heading-icon" src="assets/imgs/letter.svg" alt="plus"> My Cover Letters</h2>
+	<ion-grid class="resume-grid">
+		<ion-row>
+			<ion-col class="file-box">
+				<div class="heading-bar-orange">
+					<h3 class="resume-name">
+					  Sample Letter 1
+					  <button ion-button type="submit" class="form-btn btn-small">
+					  	<img class="small-img-btn" src="assets/imgs/settings.svg" alt="se">
+					  </button>
+					  <button ion-button type="submit" class="form-btn btn-small">
+					  	<img class="small-img-btn" src="assets/imgs/share.svg" alt="sh">
+					  </button>
+					  <button ion-button type="submit" class="form-btn btn-small">
+					  	<img class="small-img-btn" src="assets/imgs/edit.svg" alt="ed">
+					  </button>
+					</h3>
+				</div>
+				<div class="inner">
+					<p class="file-attr">Date Last Modified</p>
+					<p class="file-data">December 31, 2017, 9:00 PM</p>
+					<p class="file-attr">Resume URL</p>
+					<p class="file-data">resumeediting.com/cl1</p>
+					<p class="file-attr">Template Used</p>
+					<p class="file-data">Sample Template 2</p>
+				</div>
+			</ion-col>
+		</ion-row>
+	</ion-grid>
 </ion-content>
